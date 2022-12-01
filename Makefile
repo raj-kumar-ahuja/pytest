@@ -5,6 +5,9 @@ install:
 test:
 	python -m pytest -vvv --cov=hello --cov=greetings tests
 
+debug:
+	python -m pytest -vvv --pdb --maxfail=3 --cov=hello --cov=greetings tests #debugger is invoked
+
 format:
 	black *.py
 
